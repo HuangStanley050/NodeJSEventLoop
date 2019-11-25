@@ -2,6 +2,8 @@
 const pendingTimers = [];
 const pendingOSTasks = [];
 const pendingOperations = [];
+
+// new timer, new taks and new operations are recorded from myFile running
 myFile.runContent();
 
 function shouldContinue() {
@@ -11,6 +13,9 @@ function shouldContinue() {
   return pendingTimers.length || pendingOSTasks.length || pendingOperations;
 }
 //entire body runs in one 'tick'
-while (shouldContinue()) {}
+while (shouldContinue()) {
+  //check pending timers call callbacks
+  //check pending os tasks and pending operations, call callbacks
+}
 
 //nodeJs ends
